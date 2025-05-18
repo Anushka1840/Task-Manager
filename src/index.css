@@ -1,0 +1,90 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 20px;
+  background-color: rgb(255, 224, 229);
+  text-align: center;
+  
+}
+
+h1 {
+  background-color: aliceblue;
+  padding: 10px 20px;
+  border-radius: 20px;
+  display: inline-block;
+  color: rgb(47, 89, 108);
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  text-shadow: #eac0c7;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+form {
+  margin-bottom: 1em;
+  display:flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+input[type="text"] {
+  padding: 8px;
+  font-size: 1em;
+  width: 300px;
+  border: 1px solid black;
+  border-radius: 4px;
+}
+
+button {
+  margin: 0 5px;
+  padding: 8px 12px;
+  border-radius: 20%;
+  background-color: rgb(220, 217, 217);
+  color:rgb(4, 38, 68);
+  cursor: pointer;
+  
+}
+
+button:disabled {
+  opacity: 0.5;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+li {
+  padding: 12px;
+ 
+  border-radius: 6px;
+  align-items: start;
+}
+
+li.completed label {
+  text-decoration: line-through;
+  color: black;
+}
+
+.input{
+  max-width: 50%;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+  background-color: #62adb7}
+
+.filters{
+  max-width: 50%;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+  background-color: #aceae2;
+}
+
+.a{
+  max-width: 50%;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+  background-color: #eac0c7;
+}
