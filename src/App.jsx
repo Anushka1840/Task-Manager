@@ -4,15 +4,16 @@ import TaskList from './components/TaskList';
 import FilterButtons from './components/FilterButtons';
 
 function App() {
-  const [tasks, setTasks] = useState([]);
+  const [tasks, setTasks] = useState(() => {
+  try {
+    const savedTasks = localStorage.getItem('tasks');
+    return savedTasks ? JSON.parse(savedTasks) : [];
+  } catch (error) {
+    console.error("Failed to load tasks from localStorage:", error);
+    return [];
+  }
+  });
   const [filter, setFilter] = useState('All');
-
-  useEffect(() => {
-    const storedTasks = localStorage.getItem('tasks');
-    if (storedTasks) {
-      setTasks(JSON.parse(storedTasks));
-    }
-  }, []);
 
   useEffect(() => {
     localStorage.setItem('tasks', JSON.stringify(tasks));
